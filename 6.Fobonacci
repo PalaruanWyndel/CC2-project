@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class SidAndWyndel5 {
+    
+    public static void main(String [] args){
+        display();
+    }
+static void display(){
+        System.out.println("Enter a number");
+        int n = new Scanner(System.in).nextInt();
+            if (n == 0) {
+               System.out.println("f(0)\t0");
+            }
+            if (n == 1) {
+               System.out.println("f(0)\t0");
+               System.out.println("f(0)\t0,1");
+               
+            }    
+            else {
+               for(int i = 0; i <= n; i++) {
+                   System.out.print("f(" + i + ")\t");               
+                    System.out.print("f(" + i + ")\t");
+                    for(int j = 0; j <= i; j++) {
+                        System.out.print(fibonaccinumber(j) +" ");
+                    }
+                    System.out.print("\n");
+               }
+               
+    }
+            
+}
+static int fibonaccinumber(int nth) {
+        if(nth <= 1){
+            return nth;
+        }
+        else {
+            return fibonaccinumber(nth - 1) + fibonaccinumber(nth- 2);
+            
+        
+        }    }
+}
