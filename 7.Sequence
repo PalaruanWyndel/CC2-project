@@ -1,0 +1,21 @@
+public class SidAndWyndel6 {
+ public static void main(String[]args){
+   
+    int hello[]={1,2,3,4,5};
+    
+ 
+    System.out.println("The first Array");
+    display(hello);
+ }
+        public static void display(int x[]){
+        for(int row=0;row<x.length;row++){
+            System.out.print("f{"+ x[row] +")" +"\t" );
+            System.out.println((fib(x[row])));
+        }
+           
+    }
+        static int fib(int n){
+            if(n<=1)return n;
+            else return fib(n-1) + fib(n-2);
+        }
+    }
